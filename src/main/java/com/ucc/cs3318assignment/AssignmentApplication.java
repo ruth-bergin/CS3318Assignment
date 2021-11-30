@@ -10,6 +10,7 @@ import java.io.IOException;
 public class AssignmentApplication extends Application {
 
     public boolean validateEmailAddress(String emailAddress) {
+        if (emailAddress.length() < 1) {return false;}
         return true;
     }
 
