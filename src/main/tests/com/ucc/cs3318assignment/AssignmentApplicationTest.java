@@ -8,9 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class AssignmentApplicationTest{
 
     @Test
-    public void sampleTest() {
+    public void emptyEmailAddressReturnsInvalid() {
         AssignmentApplication app = new AssignmentApplication();
-        assertTrue(app.example());
+        assertFalse(app.validateEmailAddress(""));
     }
-
 }

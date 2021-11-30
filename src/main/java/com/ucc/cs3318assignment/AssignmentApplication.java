@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class AssignmentApplication extends Application {
 
-    public boolean example() {
+    public boolean validateEmailAddress(String emailAddress) {
         return true;
     }
 
