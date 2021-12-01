@@ -73,4 +73,10 @@ class AssignmentApplicationTest {
         assertFalse(app.validatePassword("@1234534"));
     }
 
+    @Test
+    public void rejectPasswordWithoutANumber() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validatePassword("@password"));
+    }
+
 }
