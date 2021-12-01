@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class AssignmentApplicationTest{
+class AssignmentApplicationTest {
 
     @Test
     public void emptyEmailAddressReturnsInvalid() {
@@ -42,4 +42,11 @@ class AssignmentApplicationTest{
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("jane.doe@gmail."));
     }
+
+    @Test
+    public void emailAddressBeginningWithSpecialCharacterReturnsInvalid() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validateEmailAddress("@gmail.com"));
+    }
+
 }
