@@ -14,6 +14,10 @@ public class AssignmentApplication extends Application {
                 !emailAddress.matches(".*[\\.[@]][\\.[@]].*");
     }
 
+    public boolean validatePassword(String password) {
+        return true;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AssignmentApplication.class.getResource("hello-view.fxml"));
