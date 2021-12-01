@@ -79,4 +79,10 @@ class AssignmentApplicationTest {
         assertFalse(app.validatePassword("@password"));
     }
 
+    @Test
+    public void rejectPasswordWithoutASpecialChar() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validatePassword("password-123"));
+    }
+
 }
