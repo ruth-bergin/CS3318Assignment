@@ -12,4 +12,10 @@ class AssignmentApplicationTest{
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress(""));
     }
+
+    @Test
+    public void emailAddressWithoutAtSignReturnsInvalid() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validateEmailAddress("janedoe.com"));
+    }
 }
