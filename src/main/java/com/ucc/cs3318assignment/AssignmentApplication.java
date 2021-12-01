@@ -10,7 +10,7 @@ import java.io.IOException;
 public class AssignmentApplication extends Application {
 
     public boolean validateEmailAddress(String emailAddress) {
-        return emailAddress.matches("^\s*@^\s*.^\s*");
+        return emailAddress.matches("[\\w[\\.]]*@[\\w[\\.]]*\\.[a-z]*");
     }
 
     @Override
