@@ -15,7 +15,7 @@ public class AssignmentApplication extends Application {
     }
 
     public boolean validatePassword(String password) {
-        return password.length() > 6;
+        return password.matches(".{7,}?");
     }
 
     @Override
