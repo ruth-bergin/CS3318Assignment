@@ -61,4 +61,10 @@ class AssignmentApplicationTest {
         assertTrue(app.validatePassword("@password1"));
     }
 
+    @Test
+    public void rejectShortPassword() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validatePassword("p"));
+    }
+
 }
