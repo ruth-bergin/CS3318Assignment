@@ -15,7 +15,9 @@ public class AssignmentApplication extends Application {
     }
 
     public boolean validatePassword(String password) {
-        return password.matches("(?=.*[a-zA-Z]+)(?=.*\\d+).{7,}?");
+        return password.matches("(?=.*[a-zA-Z]+)" +
+                                        "(?=.*\\d+)" +
+                                            ".{7,}?");
     }
 
     @Override
