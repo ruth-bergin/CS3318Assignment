@@ -64,7 +64,7 @@ class AssignmentApplicationTest {
     @Test
     public void rejectShortPassword() {
         AssignmentApplication app = new AssignmentApplication();
-        assertFalse(app.validatePassword("p"));
+        assertFalse(app.validatePassword("p@3456"));
     }
 
     @Test
