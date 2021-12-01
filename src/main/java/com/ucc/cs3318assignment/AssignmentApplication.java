@@ -11,7 +11,7 @@ public class AssignmentApplication extends Application {
 
     public boolean validateEmailAddress(String emailAddress) {
         return emailAddress.matches("[\\w[\\.]]*@[\\w[\\.]]*\\.[a-z]*") &&
-                !emailAddress.matches(".*\\.\\..*");
+                !emailAddress.matches(".*[\\.[@]][\\.[@]].*");
     }
 
     @Override
