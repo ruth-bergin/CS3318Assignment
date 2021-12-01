@@ -36,4 +36,10 @@ class AssignmentApplicationTest{
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("jane.doe@.gmail.com"));
     }
+
+    @Test
+    public void emailAddressNotEndingInLetterReturnsInvalid() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validateEmailAddress("jane.doe@gmail."));
+    }
 }
