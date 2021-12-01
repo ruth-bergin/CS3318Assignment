@@ -20,8 +20,8 @@ class AssignmentApplicationTest{
     }
 
     @Test
-    public void emailAddressWithoutFullStopReturnsInvalid() {
+    public void emailAddressWithoutFullStopAfterAtSignReturnsInvalid() {
         AssignmentApplication app = new AssignmentApplication();
-        assertFalse(app.validateEmailAddress("janedoe@gmailcom"));
+        assertFalse(app.validateEmailAddress("jane.doe@gmailcom"));
     }
 }
