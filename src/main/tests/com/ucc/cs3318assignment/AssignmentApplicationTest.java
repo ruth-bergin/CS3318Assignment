@@ -8,25 +8,25 @@ import static org.junit.jupiter.api.Assertions.*;
 class AssignmentApplicationTest {
 
     @Test
-    public void correctEmailAddressReturnsValid() {
+    public void acceptValidEmailAddress() {
         AssignmentApplication app = new AssignmentApplication();
         assertTrue(app.validateEmailAddress("jane.doe@gmail.com"));
     }
 
     @Test
-    public void emptyEmailAddressReturnsInvalid() {
+    public void rejectEmptyEmailAddress() {
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress(""));
     }
 
     @Test
-    public void emailAddressWithoutAtSignReturnsInvalid() {
+    public void rejectEmailAddressWithoutAtSign() {
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("janedoe.com"));
     }
 
     @Test
-    public void emailAddressWithoutFullStopAfterAtSignReturnsInvalid() {
+    public void rejectEmailAddressWithoutFullStopAfterAtSign() {
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("jane.doe@gmailcom"));
     }
@@ -38,25 +38,25 @@ class AssignmentApplicationTest {
     }
 
     @Test
-    public void emailAddressWithAdjacentFullStopAtSignReturnsInvalid() {
+    public void rejectEmailAddressWithAdjacentFullStopAtSign() {
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("jane.doe@.gmail.com"));
     }
 
     @Test
-    public void emailAddressNotEndingInLetterReturnsInvalid() {
+    public void rejectEmailAddressNotEndingInLetter() {
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("jane.doe@gmail."));
     }
 
     @Test
-    public void emailAddressBeginningWithSpecialCharacterReturnsInvalid() {
+    public void rejectEmailAddressBeginningWithSpecialCharacter() {
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("@gmail.com"));
     }
 
     @Test
-    public void correctPasswordReturnsValid() {
+    public void acceptValidPassword() {
         AssignmentApplication app = new AssignmentApplication();
         assertTrue(app.validatePassword("@password1"));
     }
