@@ -30,4 +30,10 @@ class AssignmentApplicationTest{
         AssignmentApplication app = new AssignmentApplication();
         assertFalse(app.validateEmailAddress("jane.doe@gmail..com"));
     }
+
+    @Test
+    public void emailAddressWithAdjacentFullStopAtSignReturnsInvalid() {
+        AssignmentApplication app = new AssignmentApplication();
+        assertFalse(app.validateEmailAddress("jane.doe@.gmail.com"));
+    }
 }
