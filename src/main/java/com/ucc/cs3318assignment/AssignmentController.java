@@ -30,7 +30,7 @@ public class AssignmentController {
             emailLabel.setText("Invalid format - email address rejected.");
         }
         if (AssignmentApplication.validatePassword(password.getText())) {
-            password.setText("Password accepted!");
+            passwordLabel.setText("Password accepted!");
         } else {
             passwordLabel.setText("Invalid format - password rejected.");
         }
