@@ -24,7 +24,15 @@ public class AssignmentController {
 
     @FXML
     public void onSubmitButtonClick(ActionEvent actionEvent) {
-        emailLabel.setText(emailAddress.getText());
-        passwordLabel.setText(password.getText());
+        if (AssignmentApplication.validateEmailAddress(emailAddress.getText())) {
+            emailLabel.setText("Email address accepted!");
+        } else {
+            emailLabel.setText("Invalid format - email address rejected.");
+        }
+        if (AssignmentApplication.validatePassword(password.getText())) {
+            password.setText("Password accepted!");
+        } else {
+            passwordLabel.setText("Invalid format - password rejected.");
+        }
     }
 }
